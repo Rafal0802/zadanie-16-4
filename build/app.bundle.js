@@ -261,6 +261,20 @@ process.umask = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(15);
+} else {
+  module.exports = __webpack_require__(16);
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -317,7 +331,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -357,20 +371,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 4 */
@@ -507,7 +507,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(3);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -578,7 +578,7 @@ module.exports = warning;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(1);
+  var invariant = __webpack_require__(2);
   var warning = __webpack_require__(6);
   var ReactPropTypesSecret = __webpack_require__(17);
   var loggedTypeFailures = {};
@@ -897,7 +897,7 @@ module.exports = bytesToUuid;
 "use strict";
 
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -932,9 +932,9 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, null), do
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var m = __webpack_require__(4),
-    n = __webpack_require__(1),
+    n = __webpack_require__(2),
     p = __webpack_require__(5),
-    q = __webpack_require__(2),
+    q = __webpack_require__(3),
     r = "function" === typeof Symbol && Symbol["for"],
     t = r ? Symbol["for"]("react.element") : 60103,
     u = r ? Symbol["for"]("react.portal") : 60106,
@@ -1071,10 +1071,10 @@ if (process.env.NODE_ENV !== "production") {
     'use strict';
 
     var _assign = __webpack_require__(4);
-    var invariant = __webpack_require__(1);
+    var invariant = __webpack_require__(2);
     var emptyObject = __webpack_require__(5);
     var warning = __webpack_require__(6);
-    var emptyFunction = __webpack_require__(2);
+    var emptyFunction = __webpack_require__(3);
     var checkPropTypes = __webpack_require__(7);
 
     // TODO: this is special because it gets imported during build.
@@ -2546,11 +2546,11 @@ if (process.env.NODE_ENV === 'production') {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var ba = __webpack_require__(1),
-    ea = __webpack_require__(3),
+var ba = __webpack_require__(2),
+    ea = __webpack_require__(1),
     m = __webpack_require__(8),
     A = __webpack_require__(4),
-    C = __webpack_require__(2),
+    C = __webpack_require__(3),
     fa = __webpack_require__(9),
     ha = __webpack_require__(10),
     ja = __webpack_require__(11),
@@ -4832,7 +4832,7 @@ module.exports = isNode;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var invariant=__webpack_require__(1);var React=__webpack_require__(3);var warning=__webpack_require__(6);var ExecutionEnvironment=__webpack_require__(8);var _assign=__webpack_require__(4);var emptyFunction=__webpack_require__(2);var checkPropTypes=__webpack_require__(7);var getActiveElement=__webpack_require__(9);var shallowEqual=__webpack_require__(10);var containsNode=__webpack_require__(11);var emptyObject=__webpack_require__(5);var hyphenateStyleName=__webpack_require__(23);var camelizeStyleName=__webpack_require__(25);// Relying on the `invariant()` implementation lets us
+ */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var invariant=__webpack_require__(2);var React=__webpack_require__(1);var warning=__webpack_require__(6);var ExecutionEnvironment=__webpack_require__(8);var _assign=__webpack_require__(4);var emptyFunction=__webpack_require__(3);var checkPropTypes=__webpack_require__(7);var getActiveElement=__webpack_require__(9);var shallowEqual=__webpack_require__(10);var containsNode=__webpack_require__(11);var emptyObject=__webpack_require__(5);var hyphenateStyleName=__webpack_require__(23);var camelizeStyleName=__webpack_require__(25);// Relying on the `invariant()` implementation lets us
 // have preserve the format and params in the www builds.
 !React?invariant(false,'ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.'):void 0;var invokeGuardedCallback=function invokeGuardedCallback(name,func,context,a,b,c,d,e,f){this._hasCaughtError=false;this._caughtError=null;var funcArgs=Array.prototype.slice.call(arguments,3);try{func.apply(context,funcArgs);}catch(error){this._caughtError=error;this._hasCaughtError=true;}};{// In DEV mode, we swap out invokeGuardedCallback for a special version
 // that plays more nicely with the browser's DevTools. The idea is to preserve
@@ -7919,7 +7919,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(3);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -7930,6 +7930,10 @@ var _uuid2 = _interopRequireDefault(_uuid);
 var _App = __webpack_require__(31);
 
 var _App2 = _interopRequireDefault(_App);
+
+var _Title = __webpack_require__(36);
+
+var _Title2 = _interopRequireDefault(_Title);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7976,7 +7980,11 @@ var App = function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', { className: _App2.default.TodoApp });
+			return _react2.default.createElement(
+				'div',
+				{ className: _App2.default.TodoApp },
+				_react2.default.createElement(_Title2.default, { title: 'title', number: this.state.data.length })
+			);
 		}
 	}]);
 
@@ -8780,6 +8788,36 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+		value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Title = function Title(props) {
+		return _react2.default.createElement(
+				'h1',
+				null,
+				props.title,
+				' (',
+				props.number,
+				')'
+		);
+};
+
+exports.default = Title;
 
 /***/ })
 /******/ ]);
